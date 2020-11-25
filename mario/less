@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void)
+{
+    int n;
+    do
+    {
+        n = get_int("height: ");
+    }
+    //we want our range to be between 1 and 8
+    while (n < 1 || n > 8);
+    // we want our rows to increase according to the number of rows
+    for (int row = 0; row <= n; row++)
+    {
+        for (int space = 0; space <= n - row; space++)
+        {
+            printf(" ");
+        }
+        {
+            for (int h = 0; h <= row; h++)
+            {
+                printf("#");
+            }
+            printf("\n");
+        }
+    }
+}
